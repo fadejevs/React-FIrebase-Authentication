@@ -20,7 +20,7 @@ const Login = (props) => {
         <section className='login'>
 
         <div className="loginContainer">
-            <label>Username</label>
+            <label>Email</label>
             <input type="text" autoFocus required value={email} onChange={e => setEmail(e.target.value)}/>
             <p className='errorMsg'>{emailError}</p>
             <label>Password</label>
@@ -33,12 +33,12 @@ const Login = (props) => {
                 {hasAccount ? (
                     <div className="hasAccountContainer">
                         <button onClick={handleLogin}>Sign In</button>
-                        <p>Don't have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
+                        <p className='notHaveAnAccount'>Don't have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign Up</span></p>
                     </div>
                 ) : (
                     <div className="NotHasAccountContainer">
                     <button onClick={handleSignup}>Sign Up</button>
-                    <p>Have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign In</span></p>
+                    <p className='haveAnAccount'>Have an account ? <span onClick={() => setHasAccount(!hasAccount)}>Sign In</span></p>
                      </div>
                 )}
             </div>

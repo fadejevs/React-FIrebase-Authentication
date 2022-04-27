@@ -15,6 +15,7 @@ function App() {
   const [passwordError, setPasswordError] = useState('');
   const [hasAccount, setHasAccount] = useState(false);
 
+
   const handleLogin = () => { 
     
     clearErrors();
@@ -88,7 +89,6 @@ function App() {
     setEmailError('');
     setPasswordError('');
   }
-
 
 
 
